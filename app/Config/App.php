@@ -21,15 +21,19 @@ class App extends BaseConfig
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
      * If you want to accept multiple Hostnames, set this.
-     *
-     * E.g.,
-     * When your site URL ($baseURL) is 'http://example.com/', and your site
-     * also accepts 'http://media.example.com/' and 'http://accounts.example.com/':
-     *     ['media.example.com', 'accounts.example.com']
-     *
-     * @var list<string>
      */
-    public array $allowedHostnames = [];
+    public array $allowedHostnames = ['localhost', 'my.morphine.com.tr'];
+
+    public function __construct()
+    {
+        parent::__construct();
+
+        // Dynamic Base URL detection for dual access
+        if (isset($_SERVER['HTTP_HOST'])) {
+            $protocol = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? 'https://' : 'http://';
+            $this->baseURL = $protocol . $_SERVER['HTTP_HOST'] . '/';
+        }
+    }
 
     /**
      * --------------------------------------------------------------------------

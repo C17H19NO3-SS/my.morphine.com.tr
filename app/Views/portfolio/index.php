@@ -90,7 +90,7 @@
                 <div class="w-14 h-14 bg-blue-500/[0.03] border border-blue-500/10 rounded-2xl flex items-center justify-center">
                     <i data-lucide="monitor" class="text-blue-400 w-7 h-7"></i>
                 </div>
-                <h4 class="text-2xl font-bold font-heading">Frontend</h4>
+                <h4 class="text-2xl font-bold font-heading"><?= __t('skills.frontend') ?></h4>
                 <div class="flex flex-wrap gap-3">
                     <?php foreach(['React.js', 'Next.js', 'Tailwind 4', 'TypeScript', 'Web Design'] as $s): ?>
                         <span class="px-4 py-2 bg-white/[0.02] border border-white/[0.05] rounded-xl text-sm font-semibold text-gray-400 hover:text-white hover:border-morphine-violet/40 transition-all cursor-default">
@@ -105,7 +105,7 @@
                 <div class="w-14 h-14 bg-green-500/[0.03] border border-green-500/10 rounded-2xl flex items-center justify-center">
                     <i data-lucide="server" class="text-green-400 w-7 h-7"></i>
                 </div>
-                <h4 class="text-2xl font-bold font-heading">Backend</h4>
+                <h4 class="text-2xl font-bold font-heading"><?= __t('skills.backend') ?></h4>
                 <div class="flex flex-wrap gap-3">
                     <?php foreach(['PHP / CI4', 'MySQL', 'Node.js', 'REST API', 'PostgreSQL'] as $s): ?>
                         <span class="px-4 py-2 bg-white/[0.02] border border-white/[0.05] rounded-xl text-sm font-semibold text-gray-400 hover:text-white hover:border-morphine-violet/40 transition-all cursor-default">
@@ -120,7 +120,7 @@
                 <div class="w-14 h-14 bg-purple-500/[0.03] border border-purple-500/10 rounded-2xl flex items-center justify-center">
                     <i data-lucide="terminal" class="text-purple-400 w-7 h-7"></i>
                 </div>
-                <h4 class="text-2xl font-bold font-heading">DevOps</h4>
+                <h4 class="text-2xl font-bold font-heading"><?= __t('skills.devops') ?></h4>
                 <div class="flex flex-wrap gap-3">
                     <?php foreach(['Git / GitHub', 'Docker', 'Vite', 'NPM', 'Linux'] as $s): ?>
                         <span class="px-4 py-2 bg-white/[0.02] border border-white/[0.05] rounded-xl text-sm font-semibold text-gray-400 hover:text-white hover:border-morphine-violet/40 transition-all cursor-default">
@@ -165,6 +165,75 @@
         <?php else: ?>
             <p class="col-span-full text-center text-gray-500 py-20 italic"><?= __t('projects.empty') ?></p>
         <?php endif; ?>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="py-32 relative">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+            <div class="space-y-12 animate-reveal">
+                <div class="space-y-6">
+                    <h2 class="text-5xl md:text-6xl font-heading font-extrabold tracking-tight">
+                        <?= __t('contact.title') ?>
+                    </h2>
+                    <p class="text-gray-500 text-xl font-medium max-w-md">
+                        <?= __t('contact.subtitle') ?>
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <div class="glass-card p-8 space-y-4">
+                        <div class="flex items-center gap-4 text-morphine-violet">
+                            <i data-lucide="mail" class="w-6 h-6"></i>
+                            <span class="text-xs font-bold uppercase tracking-widest text-gray-500"><?= __t('contact.info.email') ?></span>
+                        </div>
+                        <p class="text-white font-bold text-lg">hello@morphine.com.tr</p>
+                    </div>
+                    
+                    <div class="glass-card p-8 space-y-4">
+                        <div class="flex items-center gap-4 text-morphine-violet">
+                            <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            <span class="text-xs font-bold uppercase tracking-widest text-gray-500"><?= __t('contact.info.location') ?></span>
+                        </div>
+                        <p class="text-white font-bold text-lg">Istanbul, Turkey</p>
+                    </div>
+                </div>
+
+                <div class="pt-8 flex items-center gap-8">
+                    <span class="text-xs font-bold uppercase tracking-widest text-gray-500"><?= __t('contact.info.social') ?></span>
+                    <div class="flex gap-6">
+                        <a href="https://github.com/C17H19NO3-SS" target="_blank" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="github" class="w-6 h-6"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="twitter" class="w-6 h-6"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form Mockup -->
+            <div class="glass-card p-12 space-y-8 animate-reveal">
+                <div class="space-y-6">
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1"><?= __t('contact.form.name') ?></label>
+                        <input type="text" class="w-full bg-white/[0.03] border border-white/[0.08] rounded-2xl px-6 py-4 text-white placeholder-gray-600 focus:outline-none focus:border-morphine-violet/50 transition-all font-medium" placeholder="John Doe">
+                    </div>
+                    
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1"><?= __t('contact.form.email') ?></label>
+                        <input type="email" class="w-full bg-white/[0.03] border border-white/[0.08] rounded-2xl px-6 py-4 text-white placeholder-gray-600 focus:outline-none focus:border-morphine-violet/50 transition-all font-medium" placeholder="john@example.com">
+                    </div>
+
+                    <div class="space-y-2">
+                        <label class="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1"><?= __t('contact.form.message') ?></label>
+                        <textarea rows="4" class="w-full bg-white/[0.03] border border-white/[0.08] rounded-2xl px-6 py-4 text-white placeholder-gray-600 focus:outline-none focus:border-morphine-violet/50 transition-all font-medium resize-none"></textarea>
+                    </div>
+                </div>
+
+                <button class="w-full py-5 bg-linear-to-r from-morphine-violet to-morphine-indigo rounded-2xl font-bold text-white hover:shadow-glow transition-all">
+                    <?= __t('contact.form.submit') ?>
+                </button>
+            </div>
+        </div>
     </div>
 </section>
 

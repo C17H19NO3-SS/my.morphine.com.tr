@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Morphine | Professional Developer Portfolio</title>
+    <meta name="description" content="<?= __t('seo.description') ?>">
+    <meta name="keywords" content="<?= __t('seo.keywords') ?>">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Morphine | Professional Developer Portfolio">
+    <meta property="og:description" content="<?= __t('seo.description') ?>">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<?= current_url() ?>">
+    <meta property="og:image" content="<?= base_url('images/hero_bg.png') ?>">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="<?= base_url('favicon.png') ?>">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

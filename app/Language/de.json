@@ -35,6 +35,25 @@
         "subtitle": "Beispiele, bei denen aus großen Ideen Produkte werden.",
         "empty": "Noch keine Projekte gelistet."
     },
+    "contact": {
+        "title": "Kontakt <span class=\"text-morphine-violet\">aufnehmen</span>",
+        "subtitle": "Ich bin hier für ein neues Projekt, eine Zusammenarbeit veya einfach nur um Hallo zu sagen.",
+        "form": {
+            "name": "Vollständiger Name",
+            "email": "E-Mail-Adresse",
+            "message": "Ihre Nachricht",
+            "submit": "Nachricht senden"
+        },
+        "info": {
+            "location": "Standort",
+            "email": "E-Mail",
+            "social": "Soziale Medien"
+        }
+    },
+    "seo": {
+        "description": "Morphine - Full-Stack-Entwickler, der Ästhetik und Technik verbindet. Moderne Webprodukte und digitale Visionen.",
+        "keywords": "developer, portfolio, full-stack, web design, morphine, software engineer"
+    },
     "footer": {
         "rights": "Alle Rechte vorbehalten."
     }

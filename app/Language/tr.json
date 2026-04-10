@@ -35,6 +35,25 @@
         "subtitle": "Büyük fikirlerin ürüne dönüştüğü örnekler.",
         "empty": "Henüz yüklü proje bulunmamaktadır."
     },
+    "contact": {
+        "title": "Bağlantı <span class=\"text-morphine-violet\">Kur</span>",
+        "subtitle": "Yeni bir proje, iş birliği veya sadece bir merhaba için buradayım.",
+        "form": {
+            "name": "Ad Soyad",
+            "email": "E-posta Adresi",
+            "message": "Mesajınız",
+            "submit": "Mesajı Gönder"
+        },
+        "info": {
+            "location": "Konum",
+            "email": "E-posta",
+            "social": "Sosyal Medya"
+        }
+    },
+    "seo": {
+        "description": "Morphine - Estetik ve Mühendisliği birleştiren Full-Stack Geliştirici. Modern web ürünleri ve dijital vizyonlar.",
+        "keywords": "developer, portfolio, full-stack, web design, morphine, software engineer"
+    },
     "footer": {
         "rights": "Tüm hakları saklıdır."
     }

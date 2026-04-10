@@ -35,6 +35,25 @@
         "subtitle": "Examples where big ideas turn into products.",
         "empty": "No projects listed yet."
     },
+    "contact": {
+        "title": "Get in <span class=\"text-morphine-violet\">Touch</span>",
+        "subtitle": "I'm here for a new project, collaboration, or just to say hello.",
+        "form": {
+            "name": "Full Name",
+            "email": "Email Address",
+            "message": "Your Message",
+            "submit": "Send Message"
+        },
+        "info": {
+            "location": "Location",
+            "email": "Email",
+            "social": "Social Media"
+        }
+    },
+    "seo": {
+        "description": "Morphine - Full-Stack Developer combining Aesthetics and Engineering. Modern web products and digital visions.",
+        "keywords": "developer, portfolio, full-stack, web design, morphine, software engineer"
+    },
     "footer": {
         "rights": "All rights reserved."
     }

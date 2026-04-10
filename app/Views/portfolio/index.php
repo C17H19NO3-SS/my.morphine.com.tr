@@ -143,25 +143,28 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        <!-- Project Cards -->
-        <?php 
-        $projects = [
-            ['title' => 'E-Commerce Elite', 'desc' => 'Yüksek performanslı alışveriş mimarisi.', 'icon' => 'shopping-cart'],
-            ['title' => 'SaaS Navigator', 'desc' => 'Karmaşık veri setleri için akıllı panel.', 'icon' => 'activity'],
-            ['title' => 'Neural Blog', 'desc' => 'Yapay zeka odaklı içerik platformu.', 'icon' => 'zap']
-        ];
-        foreach($projects as $p): 
-        ?>
-        <div class="glass-card group cursor-pointer aspect-[4/5] relative flex items-center justify-center">
-            <div class="absolute inset-x-0 bottom-0 p-10 bg-linear-to-t from-black/95 to-transparent translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700">
-                <h4 class="text-2xl font-bold mb-3"><?= $p['title'] ?></h4>
-                <p class="text-gray-400 text-base leading-relaxed"><?= $p['desc'] ?></p>
-            </div>
-            <div class="p-16 bg-white/[0.03] border border-white/[0.05] rounded-full group-hover:scale-90 transition-all duration-1000 group-hover:border-morphine-violet/30 group-hover:shadow-[0_0_50px_-10px_rgba(139,92,246,0.2)]">
-                <i data-lucide="<?= $p['icon'] ?>" class="w-16 h-16 text-morphine-violet opacity-30 group-hover:opacity-100 transition-all"></i>
-            </div>
-        </div>
-        <?php endforeach; ?>
+        <!-- Dynamic Project Cards -->
+        <?php if (!empty($projects)): ?>
+            <?php foreach($projects as $p): ?>
+            <a href="<?= $p['url'] ?>" target="_blank" class="glass-card group cursor-pointer aspect-[4/5] relative flex items-center justify-center">
+                <div class="absolute inset-x-0 bottom-0 p-10 bg-linear-to-t from-black/95 to-transparent translate-y-6 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-700">
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <?php foreach($p['tags'] ?? [] as $tag): ?>
+                            <span class="text-[10px] uppercase tracking-widest font-bold text-morphine-violet/80 bg-morphine-violet/5 px-2 py-0.5 rounded-full border border-morphine-violet/10"><?= $tag ?></span>
+                        <?php endforeach; ?>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-3 font-heading tracking-tight"><?= $p['title'] ?></h4>
+                    <p class="text-gray-400 text-base leading-relaxed line-clamp-2"><?= $p['description'] ?></p>
+                </div>
+                <!-- Project Icon / Visual -->
+                <div class="p-16 bg-white/[0.03] border border-white/[0.05] rounded-full group-hover:scale-90 transition-all duration-1000 group-hover:border-morphine-violet/30 group-hover:shadow-[0_0_50px_-10px_rgba(139,92,246,0.2)]">
+                    <i data-lucide="<?= $p['icon'] ?? 'github' ?>" class="w-16 h-16 text-morphine-violet opacity-30 group-hover:opacity-100 transition-all"></i>
+                </div>
+            </a>
+            <?php endforeach; ?>
+        <?php else: ?>
+            <p class="col-span-full text-center text-gray-500 py-20 italic">Henüz yüklü proje bulunmamaktadır.</p>
+        <?php endif; ?>
     </div>
 </section>
 

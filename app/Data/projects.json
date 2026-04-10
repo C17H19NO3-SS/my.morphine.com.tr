@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Morphine Portfolio",
+        "description": "Premium, professional developer portfolio built with CI4 and Tailwind 4.",
+        "url": "https://github.com/C17H19NO3-SS/my.morphine.com.tr",
+        "icon": "layout",
+        "tags": ["PHP", "CI4", "Tailwind"]
+    },
+    {
+        "title": "Ajans Web Site",
+        "description": "Modern agency website architecture with creative designs.",
+        "url": "https://github.com/C17H19NO3-SS/ajans",
+        "icon": "globe",
+        "tags": ["Web", "Design"]
+    },
+    {
+        "title": "Cote Extension",
+        "description": "Specialized browser extension for enhanced productivity.",
+        "url": "https://github.com/C17H19NO3-SS/cote-ext",
+        "icon": "chrome",
+        "tags": ["Javascript", "Extension"]
+    },
+    {
+        "title": "JSON DB Engine",
+        "description": "Lightweight database engine using JSON for storage.",
+        "url": "https://github.com/C17H19NO3-SS/jsondb",
+        "icon": "database",
+        "tags": ["PHP", "JSON"]
+    },
+    {
+        "title": "File Manager Pro",
+        "description": "Advanced file management system for web environments.",
+        "url": "https://github.com/C17H19NO3-SS/filemanager",
+        "icon": "file-code",
+        "tags": ["Storage", "PHP"]
+    },
+    {
+        "title": "Q-Manager",
+        "description": "Smart queue and task management system for efficient workflows.",
+        "url": "https://github.com/C17H19NO3-SS/q-manager",
+        "icon": "list-checks",
+        "tags": ["System", "Workflow"]
+    }
+]

@@ -169,69 +169,80 @@
 </section>
 
 <!-- Contact Section -->
-<section id="contact" class="py-32 relative">
-    <div class="max-w-6xl mx-auto px-4">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
-            <div class="space-y-12 animate-reveal">
-                <div class="space-y-6">
-                    <h2 class="text-5xl md:text-6xl font-heading font-extrabold tracking-tight">
+<section id="contact" class="py-64 relative overflow-hidden">
+    <!-- Sophisticated background accent -->
+    <div class="absolute -bottom-64 -right-64 w-[1000px] h-[1000px] bg-morphine-violet/5 blur-[160px] rounded-full pointer-events-none"></div>
+    
+    <div class="max-w-6xl mx-auto px-4 relative">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-24 items-start">
+            <!-- Left Info Column -->
+            <div class="lg:col-span-2 space-y-16 animate-reveal">
+                <div class="space-y-8">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-morphine-violet/10 border border-morphine-violet/20 rounded-full">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-morphine-violet opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-morphine-violet"></span>
+                        </span>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-morphine-violet">Available for new projects</span>
+                    </div>
+                    <h2 class="text-7xl font-heading font-extrabold tracking-tighter leading-[0.9]">
                         <?= __t('contact.title') ?>
                     </h2>
-                    <p class="text-gray-500 text-xl font-medium max-w-md">
+                    <p class="text-gray-400 text-xl font-medium leading-relaxed">
                         <?= __t('contact.subtitle') ?>
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                    <div class="glass-card p-8 space-y-4">
-                        <div class="flex items-center gap-4 text-morphine-violet">
-                            <i data-lucide="mail" class="w-6 h-6"></i>
-                            <span class="text-xs font-bold uppercase tracking-widest text-gray-500"><?= __t('contact.info.email') ?></span>
-                        </div>
-                        <p class="text-white font-bold text-lg">hello@morphine.com.tr</p>
+                <div class="space-y-10">
+                    <div class="group">
+                        <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 mb-4"><?= __t('contact.info.email') ?></p>
+                        <a href="mailto:hello@morphine.com.tr" class="text-2xl font-heading font-bold text-white hover:text-morphine-violet transition-colors">hello@morphine.com.tr</a>
                     </div>
                     
-                    <div class="glass-card p-8 space-y-4">
-                        <div class="flex items-center gap-4 text-morphine-violet">
-                            <i data-lucide="map-pin" class="w-6 h-6"></i>
-                            <span class="text-xs font-bold uppercase tracking-widest text-gray-500"><?= __t('contact.info.location') ?></span>
-                        </div>
-                        <p class="text-white font-bold text-lg">Istanbul, Turkey</p>
+                    <div class="group">
+                        <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 mb-4"><?= __t('contact.info.location') ?></p>
+                        <p class="text-2xl font-heading font-bold text-white">Istanbul, TR — Remote</p>
                     </div>
-                </div>
 
-                <div class="pt-8 flex items-center gap-8">
-                    <span class="text-xs font-bold uppercase tracking-widest text-gray-500"><?= __t('contact.info.social') ?></span>
-                    <div class="flex gap-6">
-                        <a href="https://github.com/C17H19NO3-SS" target="_blank" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="github" class="w-6 h-6"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white transition-colors"><i data-lucide="twitter" class="w-6 h-6"></i></a>
+                    <div class="flex gap-8 items-center pt-8 border-t border-morphine-border">
+                        <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500"><?= __t('contact.info.social') ?></p>
+                        <div class="flex gap-6">
+                            <a href="https://github.com/C17H19NO3-SS" target="_blank" class="p-3 glass-card !rounded-xl text-gray-400 hover:text-white hover:border-morphine-violet/40 transition-all"><i data-lucide="github" class="w-5 h-5"></i></a>
+                            <a href="#" class="p-3 glass-card !rounded-xl text-gray-400 hover:text-white hover:border-morphine-violet/40 transition-all"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                            <a href="#" class="p-3 glass-card !rounded-xl text-gray-400 hover:text-white hover:border-morphine-violet/40 transition-all"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Contact Form Mockup -->
-            <div class="glass-card p-12 space-y-8 animate-reveal">
-                <div class="space-y-6">
-                    <div class="space-y-2">
-                        <label class="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1"><?= __t('contact.form.name') ?></label>
-                        <input type="text" class="w-full bg-white/[0.03] border border-white/[0.08] rounded-2xl px-6 py-4 text-white placeholder-gray-600 focus:outline-none focus:border-morphine-violet/50 transition-all font-medium" placeholder="John Doe">
-                    </div>
+            <!-- Right Form Column -->
+            <div class="lg:col-span-3">
+                <div class="glass-card p-12 md:p-16 relative group animate-reveal">
+                    <!-- Subtle glow border effect -->
+                    <div class="absolute inset-0 bg-linear-to-br from-morphine-violet/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
                     
-                    <div class="space-y-2">
-                        <label class="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1"><?= __t('contact.form.email') ?></label>
-                        <input type="email" class="w-full bg-white/[0.03] border border-white/[0.08] rounded-2xl px-6 py-4 text-white placeholder-gray-600 focus:outline-none focus:border-morphine-violet/50 transition-all font-medium" placeholder="john@example.com">
-                    </div>
+                    <form action="#" class="relative space-y-10">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                            <div class="space-y-3">
+                                <label class="text-[10px] font-bold uppercase tracking-widest text-gray-500 ml-1"><?= __t('contact.form.name') ?></label>
+                                <input type="text" class="w-full bg-white/[0.02] border border-white/[0.05] rounded-2xl px-6 py-5 text-white placeholder-gray-700 focus:outline-none focus:border-morphine-violet/30 transition-all font-medium" placeholder="Elias Thorne">
+                            </div>
+                            <div class="space-y-3">
+                                <label class="text-[10px] font-bold uppercase tracking-widest text-gray-500 ml-1"><?= __t('contact.form.email') ?></label>
+                                <input type="email" class="w-full bg-white/[0.02] border border-white/[0.05] rounded-2xl px-6 py-5 text-white placeholder-gray-700 focus:outline-none focus:border-morphine-violet/30 transition-all font-medium" placeholder="elias@studio.com">
+                            </div>
+                        </div>
 
-                    <div class="space-y-2">
-                        <label class="text-xs font-bold uppercase tracking-widest text-gray-500 ml-1"><?= __t('contact.form.message') ?></label>
-                        <textarea rows="4" class="w-full bg-white/[0.03] border border-white/[0.08] rounded-2xl px-6 py-4 text-white placeholder-gray-600 focus:outline-none focus:border-morphine-violet/50 transition-all font-medium resize-none"></textarea>
-                    </div>
+                        <div class="space-y-3">
+                            <label class="text-[10px] font-bold uppercase tracking-widest text-gray-500 ml-1"><?= __t('contact.form.message') ?></label>
+                            <textarea rows="5" class="w-full bg-white/[0.02] border border-white/[0.05] rounded-2xl px-6 py-5 text-white placeholder-gray-700 focus:outline-none focus:border-morphine-violet/30 transition-all font-medium resize-none" placeholder="Let's build something extraordinary..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-6 bg-white text-black font-black uppercase tracking-[0.2em] text-xs rounded-2xl hover:bg-morphine-violet hover:text-white hover:shadow-[0_20px_40px_-10px_rgba(139,92,246,0.3)] transition-all duration-500 cursor-pointer">
+                            <?= __t('contact.form.submit') ?>
+                        </button>
+                    </form>
                 </div>
-
-                <button class="w-full py-5 bg-linear-to-r from-morphine-violet to-morphine-indigo rounded-2xl font-bold text-white hover:shadow-glow transition-all">
-                    <?= __t('contact.form.submit') ?>
-                </button>
             </div>
         </div>
     </div>

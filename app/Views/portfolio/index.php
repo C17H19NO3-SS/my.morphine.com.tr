@@ -170,46 +170,50 @@
 
 <!-- Contact Section -->
 <section id="contact" class="py-64 relative overflow-hidden">
-    <!-- Sophisticated background accent -->
+    <!-- Sophisticated background accents -->
+    <div class="absolute inset-0 bg-[radial-gradient(#ffffff05_1px,transparent_1px)] [background-size:32px_32px] pointer-events-none"></div>
     <div class="absolute -bottom-64 -right-64 w-[1000px] h-[1000px] bg-morphine-violet/5 blur-[160px] rounded-full pointer-events-none"></div>
+    <div class="absolute top-0 left-0 w-full h-[1px] bg-linear-to-r from-transparent via-morphine-border to-transparent"></div>
     
     <div class="max-w-6xl mx-auto px-4 relative">
         <div class="grid grid-cols-1 lg:grid-cols-5 gap-24 items-start">
             <!-- Left Info Column -->
-            <div class="lg:col-span-2 space-y-16 animate-reveal">
-                <div class="space-y-8">
-                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-morphine-violet/10 border border-morphine-violet/20 rounded-full">
+            <div class="lg:col-span-2 space-y-20 animate-reveal">
+                <div class="space-y-10">
+                    <div class="inline-flex items-center gap-3 px-4 py-2 bg-white/[0.03] border border-white/[0.05] rounded-full backdrop-blur-md">
                         <span class="relative flex h-2 w-2">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-morphine-violet opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-morphine-violet"></span>
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
                         </span>
-                        <span class="text-[10px] font-bold uppercase tracking-widest text-morphine-violet">Available for new projects</span>
+                        <span class="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">Available for 2026 projects</span>
                     </div>
-                    <h2 class="text-7xl font-heading font-extrabold tracking-tighter leading-[0.9]">
+                    <h2 class="text-7xl md:text-8xl font-heading font-extrabold tracking-tighter leading-[0.85] text-gradient">
                         <?= __t('contact.title') ?>
                     </h2>
-                    <p class="text-gray-400 text-xl font-medium leading-relaxed">
+                    <p class="text-gray-400 text-xl font-medium leading-relaxed max-w-sm">
                         <?= __t('contact.subtitle') ?>
                     </p>
                 </div>
 
-                <div class="space-y-10">
-                    <div class="group">
-                        <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 mb-4"><?= __t('contact.info.email') ?></p>
-                        <a href="mailto:hello@morphine.com.tr" class="text-2xl font-heading font-bold text-white hover:text-morphine-violet transition-colors">hello@morphine.com.tr</a>
+                <div class="space-y-12">
+                    <div class="space-y-2 group">
+                        <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-gray-600 mb-4 transition-colors group-hover:text-morphine-violet"><?= __t('contact.info.email') ?></p>
+                        <a href="mailto:hello@morphine.com.tr" class="text-2xl md:text-3xl font-heading font-bold text-white hover:text-morphine-violet transition-all duration-500 underline underline-offset-8 decoration-white/10 hover:decoration-morphine-violet">hello@morphine.com.tr</a>
                     </div>
                     
-                    <div class="group">
-                        <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500 mb-4"><?= __t('contact.info.location') ?></p>
-                        <p class="text-2xl font-heading font-bold text-white">Istanbul, TR — Remote</p>
+                    <div class="space-y-2">
+                        <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-gray-600 mb-4"><?= __t('contact.info.location') ?></p>
+                        <p class="text-2xl md:text-3xl font-heading font-bold text-white">Istanbul, TR <span class="text-gray-600">/</span> Remote</p>
                     </div>
 
-                    <div class="flex gap-8 items-center pt-8 border-t border-morphine-border">
-                        <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-500"><?= __t('contact.info.social') ?></p>
+                    <div class="flex gap-10 items-center pt-12 border-t border-white/[0.05]">
+                        <p class="text-[10px] font-bold uppercase tracking-[0.4em] text-gray-600"><?= __t('contact.info.social') ?></p>
                         <div class="flex gap-6">
-                            <a href="https://github.com/C17H19NO3-SS" target="_blank" class="p-3 glass-card !rounded-xl text-gray-400 hover:text-white hover:border-morphine-violet/40 transition-all"><i data-lucide="github" class="w-5 h-5"></i></a>
-                            <a href="#" class="p-3 glass-card !rounded-xl text-gray-400 hover:text-white hover:border-morphine-violet/40 transition-all"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
-                            <a href="#" class="p-3 glass-card !rounded-xl text-gray-400 hover:text-white hover:border-morphine-violet/40 transition-all"><i data-lucide="twitter" class="w-5 h-5"></i></a>
+                            <?php foreach(['github' => 'https://github.com/C17H19NO3-SS', 'linkedin' => '#', 'twitter' => '#'] as $icon => $url): ?>
+                                <a href="<?= $url ?>" target="_blank" class="w-12 h-12 glass-card flex items-center justify-center text-gray-400 hover:text-white hover:scale-110 hover:-translate-y-1 transition-all duration-500">
+                                    <i data-lucide="<?= $icon ?>" class="w-5 h-5"></i>
+                                </a>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 </div>
@@ -217,30 +221,35 @@
 
             <!-- Right Form Column -->
             <div class="lg:col-span-3">
-                <div class="glass-card p-12 md:p-16 relative group animate-reveal">
-                    <!-- Subtle glow border effect -->
-                    <div class="absolute inset-0 bg-linear-to-br from-morphine-violet/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000"></div>
+                <div class="glass-card p-12 md:p-20 relative group overflow-hidden animate-reveal">
+                    <!-- High-end decorative pattern -->
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-morphine-violet/10 blur-[100px] rounded-full"></div>
                     
-                    <form action="#" class="relative space-y-10">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                            <div class="space-y-3">
-                                <label class="text-[10px] font-bold uppercase tracking-widest text-gray-500 ml-1"><?= __t('contact.form.name') ?></label>
-                                <input type="text" class="w-full bg-white/[0.02] border border-white/[0.05] rounded-2xl px-6 py-5 text-white placeholder-gray-700 focus:outline-none focus:border-morphine-violet/30 transition-all font-medium" placeholder="Elias Thorne">
+                    <form action="#" class="relative space-y-12">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                            <div class="space-y-4 group">
+                                <label class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-600 block transition-colors group-focus-within:text-morphine-violet"><?= __t('contact.form.name') ?></label>
+                                <input type="text" class="w-full bg-transparent border-b border-white/10 py-4 text-white placeholder-gray-800 focus:outline-none focus:border-morphine-violet transition-all font-medium text-lg" placeholder="Elias Thorne">
                             </div>
-                            <div class="space-y-3">
-                                <label class="text-[10px] font-bold uppercase tracking-widest text-gray-500 ml-1"><?= __t('contact.form.email') ?></label>
-                                <input type="email" class="w-full bg-white/[0.02] border border-white/[0.05] rounded-2xl px-6 py-5 text-white placeholder-gray-700 focus:outline-none focus:border-morphine-violet/30 transition-all font-medium" placeholder="elias@studio.com">
+                            <div class="space-y-4 group">
+                                <label class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-600 block transition-colors group-focus-within:text-morphine-violet"><?= __t('contact.form.email') ?></label>
+                                <input type="email" class="w-full bg-transparent border-b border-white/10 py-4 text-white placeholder-gray-800 focus:outline-none focus:border-morphine-violet transition-all font-medium text-lg" placeholder="elias@studio.com">
                             </div>
                         </div>
 
-                        <div class="space-y-3">
-                            <label class="text-[10px] font-bold uppercase tracking-widest text-gray-500 ml-1"><?= __t('contact.form.message') ?></label>
-                            <textarea rows="5" class="w-full bg-white/[0.02] border border-white/[0.05] rounded-2xl px-6 py-5 text-white placeholder-gray-700 focus:outline-none focus:border-morphine-violet/30 transition-all font-medium resize-none" placeholder="Let's build something extraordinary..."></textarea>
+                        <div class="space-y-4 group">
+                            <label class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-600 block transition-colors group-focus-within:text-morphine-violet"><?= __t('contact.form.message') ?></label>
+                            <textarea rows="4" class="w-full bg-transparent border-b border-white/10 py-4 text-white placeholder-gray-800 focus:outline-none focus:border-morphine-violet transition-all font-medium text-lg resize-none" placeholder="How can I help you?"></textarea>
                         </div>
 
-                        <button type="submit" class="w-full py-6 bg-white text-black font-black uppercase tracking-[0.2em] text-xs rounded-2xl hover:bg-morphine-violet hover:text-white hover:shadow-[0_20px_40px_-10px_rgba(139,92,246,0.3)] transition-all duration-500 cursor-pointer">
-                            <?= __t('contact.form.submit') ?>
-                        </button>
+                        <div class="pt-6">
+                            <button type="submit" class="w-full py-7 bg-white text-black font-black uppercase tracking-[0.3em] text-[11px] rounded-2xl hover:bg-morphine-violet hover:text-white hover:shadow-[0_20px_60px_-10px_rgba(139,92,246,0.4)] transition-all duration-700 cursor-pointer group">
+                                <span class="flex items-center justify-center gap-3">
+                                    <?= __t('contact.form.submit') ?>
+                                    <i data-lucide="send" class="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                                </span>
+                            </button>
+                        </div>
                     </form>
                 </div>
             </div>

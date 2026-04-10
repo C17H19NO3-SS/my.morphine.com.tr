@@ -15,14 +15,14 @@
             MORPHINE
         </h1>
         <p class="max-w-2xl mx-auto text-xl md:text-2xl text-gray-400 font-medium leading-relaxed">
-            Geleceğin dijital dünyasını <span class="text-white">estetik</span> ve <span class="text-white">mühendislik</span> ile inşa eden tam yığın geliştirici.
+            <?= __t('hero.subtitle') ?>
         </p>
         <div class="flex flex-wrap justify-center gap-6 pt-10">
             <a href="#projects" class="px-10 py-5 glass-card !rounded-2xl bg-white/[0.03] font-bold hover:shadow-glow flex items-center gap-3 group transition-all">
-                Projelerimi Keşfet <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                <?= __t('hero.cta_discover') ?> <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
             </a>
             <a href="#contact" class="px-10 py-5 font-bold text-gray-400 hover:text-white transition-colors">
-                Bağlantı Kur
+                <?= __t('hero.cta_contact') ?>
             </a>
         </div>
     </div>
@@ -38,19 +38,19 @@
                     <i data-lucide="user" class="text-morphine-violet w-6 h-6"></i>
                 </div>
                 <h2 class="text-6xl font-heading font-extrabold tracking-tighter leading-tight">
-                    Fikirleri <span class="text-morphine-violet">Gerçeğe</span><br>Dönüştüren Mühendislik
+                    <?= __t('about.heading') ?>
                 </h2>
                 <div class="space-y-6 text-gray-400 text-xl leading-relaxed font-medium">
                     <p>
-                        Merhaba, ben <span class="text-white">Morphine</span>. Son 5 yıldır, teknolojinin sınırlarını zorlayarak kullanıcı deneyimini merkeze alan dijital ürünler tasarlıyorum. 
+                        <?= __t('about.bio1') ?>
                     </p>
                     <p>
-                        Web dünyası benim için sadece kod satırlarından ibaret değil; bir sanatı, bir problemi çözme biçimini ve geleceği inşa etme tutkusunu temsil ediyor.
+                        <?= __t('about.bio2') ?>
                     </p>
                 </div>
                 <div class="pt-6">
                     <a href="#contact" class="inline-flex items-center gap-3 text-white font-bold hover:text-morphine-violet transition-colors group text-lg">
-                        Vizyonum Hakkında Daha Fazlası <i data-lucide="arrow-up-right" class="w-5 h-5 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform"></i>
+                        <?= __t('about.cta') ?> <i data-lucide="arrow-up-right" class="w-5 h-5 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform"></i>
                     </a>
                 </div>
             </div>
@@ -59,12 +59,12 @@
             <div class="lg:col-span-5 space-y-8 animate-reveal">
                 <div class="glass-card p-12 flex flex-col items-center justify-center text-center group">
                     <div class="text-7xl font-heading font-black text-gradient group-hover:scale-105 transition-transform duration-700">5+</div>
-                    <div class="text-gray-500 text-xs mt-4 uppercase tracking-[0.3em] font-extrabold">Endüstri Deneyimi</div>
+                    <div class="text-gray-500 text-xs mt-4 uppercase tracking-[0.3em] font-extrabold"><?= __t('about.stats.experience') ?></div>
                 </div>
 
                 <div class="glass-card p-12 flex flex-col items-center justify-center text-center group">
                     <div class="text-7xl font-heading font-black text-gradient group-hover:scale-105 transition-transform duration-700">50+</div>
-                    <div class="text-gray-500 text-xs mt-4 uppercase tracking-[0.3em] font-extrabold">Ölçeklenebilir Proje</div>
+                    <div class="text-gray-500 text-xs mt-4 uppercase tracking-[0.3em] font-extrabold"><?= __t('about.stats.projects') ?></div>
                 </div>
             </div>
         </div>
@@ -79,9 +79,9 @@
     <div class="max-w-6xl mx-auto px-4 relative">
         <div class="text-center mb-24 space-y-6 animate-reveal">
             <h2 class="text-5xl md:text-6xl font-heading font-extrabold tracking-tight">
-                Teknik <span class="italic text-morphine-violet">Stack</span>
+                <?= __t('skills.title') ?>
             </h2>
-            <p class="text-gray-500 text-xl max-w-2xl mx-auto font-medium">En son teknolojilerle modern mimariler inşa ediyorum.</p>
+            <p class="text-gray-500 text-xl max-w-2xl mx-auto font-medium"><?= __t('skills.subtitle') ?></p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
@@ -137,9 +137,9 @@
 <section id="projects" class="max-w-6xl mx-auto px-4 py-32">
     <div class="text-center mb-24 space-y-6 animate-reveal">
         <h2 class="text-5xl md:text-6xl font-heading font-extrabold tracking-tight">
-            Seçkin <span class="bg-linear-to-r from-morphine-violet to-morphine-indigo bg-clip-text text-transparent italic">Çalışmalar</span>
+            <?= __t('projects.title') ?>
         </h2>
-        <p class="text-gray-500 text-xl font-medium">Büyük fikirlerin ürüne dönüştüğü örnekler.</p>
+        <p class="text-gray-500 text-xl font-medium"><?= __t('projects.subtitle') ?></p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -163,7 +163,7 @@
             </a>
             <?php endforeach; ?>
         <?php else: ?>
-            <p class="col-span-full text-center text-gray-500 py-20 italic">Henüz yüklü proje bulunmamaktadır.</p>
+            <p class="col-span-full text-center text-gray-500 py-20 italic"><?= __t('projects.empty') ?></p>
         <?php endif; ?>
     </div>
 </section>

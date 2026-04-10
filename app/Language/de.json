@@ -1,0 +1,41 @@
+{
+    "nav": {
+        "home": "Startseite",
+        "about": "Über mich",
+        "skills": "Fähigkeiten",
+        "projects": "Projekte",
+        "contact": "Kontakt"
+    },
+    "hero": {
+        "title": "MORPHINE",
+        "subtitle": "Ein Full-Stack-Entwickler, der die digitale Welt von morgen mit <span class=\"text-white\">Ästhetik</span> und <span class=\"text-white\">Engineering</span> aufbaut.",
+        "cta_discover": "Projekte entdecken",
+        "cta_contact": "Verbinden"
+    },
+    "about": {
+        "title": "Über mich",
+        "heading": "Engineering, das <span class=\"text-morphine-violet\">Ideen</span><br>in die Realität umsetzt",
+        "bio1": "Hallo, ich bin <span class=\"text-white\">Morphine</span>. Seit 5 Jahren entwerfe ich digitale Produkte, die Grenzen überschreiten und das Benutzererlebnis in den Mittelpunkt stellen.",
+        "bio2": "Die Webwelt besteht für mich nicht nur aus Codezeilen; sie repräsentiert eine Kunstform, eine Art der Problemlösung und die Leidenschaft, die Zukunft zu gestalten.",
+        "cta": "Mehr über meine Vision",
+        "stats": {
+            "experience": "Branchenerfahrung",
+            "projects": "Skalierbare Projekte"
+        }
+    },
+    "skills": {
+        "title": "Technischer <span class=\"italic text-morphine-violet\">Stack</span>",
+        "subtitle": "Ich baue moderne Architekturen mit den neuesten Technologien.",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "devops": "DevOps"
+    },
+    "projects": {
+        "title": "Ausgewählte <span class=\"bg-linear-to-r from-morphine-violet to-morphine-indigo bg-clip-text text-transparent italic\">Werke</span>",
+        "subtitle": "Beispiele, bei denen aus großen Ideen Produkte werden.",
+        "empty": "Noch keine Projekte gelistet."
+    },
+    "footer": {
+        "rights": "Alle Rechte vorbehalten."
+    }
+}

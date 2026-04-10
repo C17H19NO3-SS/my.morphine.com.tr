@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="tr" class="scroll-smooth">
+<html lang="<?= service('language')->getLocale() ?>" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -84,12 +83,23 @@
             MORPHINE
         </div>
         <div class="hidden md:flex items-center gap-10">
-            <a href="#about" class="nav-link">Hakkımda</a>
-            <a href="#skills" class="nav-link">Yetenekler</a>
-            <a href="#projects" class="nav-link">Projeler</a>
+            <a href="#about" class="nav-link"><?= __t('nav.about') ?></a>
+            <a href="#skills" class="nav-link"><?= __t('nav.skills') ?></a>
+            <a href="#projects" class="nav-link"><?= __t('nav.projects') ?></a>
+            
+            <!-- Language Switcher -->
+            <div class="flex items-center gap-3 border-l border-morphine-border pl-10">
+                <?php foreach(config('App')->supportedLocales as $locale): ?>
+                    <a href="<?= base_url($locale) ?>" 
+                       class="text-[10px] font-bold tracking-widest uppercase transition-all <?= service('language')->getLocale() == $locale ? 'text-morphine-violet' : 'text-gray-500 hover:text-white' ?>">
+                        <?= $locale ?>
+                    </a>
+                <?php endforeach; ?>
+            </div>
+
             <a href="#contact"
                 class="px-6 py-2.5 glass-card !rounded-full text-sm font-bold text-white hover:shadow-glow transition-all">
-                İletişim
+                <?= __t('nav.contact') ?>
             </a>
         </div>
     </nav>
@@ -100,7 +110,7 @@
 
     <footer class="mt-20 py-12 border-t border-morphine-border text-center">
         <div class="max-w-6xl mx-auto px-4">
-            <p class="text-gray-500 text-sm">&copy; <?= date('Y') ?> Morphine. Tüm hakları saklıdır.</p>
+            <p class="text-gray-500 text-sm">&copy; <?= date('Y') ?> Morphine. <?= __t('footer.rights') ?></p>
         </div>
     </footer>
 

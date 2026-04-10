@@ -6,7 +6,7 @@
     <title>Morphine | Professional Developer Portfolio</title>
     <meta name="description" content="<?= __t('seo.description') ?>">
     <meta name="keywords" content="<?= __t('seo.keywords') ?>">
-    
+
     <!-- Open Graph -->
     <meta property="og:title" content="Morphine | Professional Developer Portfolio">
     <meta property="og:description" content="<?= __t('seo.description') ?>">
@@ -98,12 +98,12 @@
             <a href="#about" class="nav-link"><?= __t('nav.about') ?></a>
             <a href="#skills" class="nav-link"><?= __t('nav.skills') ?></a>
             <a href="#projects" class="nav-link"><?= __t('nav.projects') ?></a>
-            
+
             <!-- Language Switcher -->
             <div class="flex items-center gap-3 border-l border-morphine-border pl-10">
-                <?php foreach(config('App')->supportedLocales as $locale): ?>
-                    <a href="<?= base_url($locale) ?>" 
-                       class="text-[10px] font-bold tracking-widest uppercase transition-all <?= service('language')->getLocale() == $locale ? 'text-morphine-violet' : 'text-gray-500 hover:text-white' ?>">
+                <?php foreach (config('App')->supportedLocales as $locale): ?>
+                    <a href="<?= base_url($locale) ?>"
+                        class="text-[10px] font-bold tracking-widest uppercase transition-all <?= service('language')->getLocale() == $locale ? 'text-morphine-violet' : 'text-gray-500 hover:text-white' ?>">
                         <?= $locale ?>
                     </a>
                 <?php endforeach; ?>
